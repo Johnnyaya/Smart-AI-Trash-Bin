@@ -1,0 +1,12 @@
+import os
+import json
+import time
+import boto3
+import numpy as np
+from flask import Flask, request
+from linebot import LineBotApi, WebhookHandler
+from linebot.models import MessageEvent, ImageMessage, TextSendMessage,TextMessage
+from boto3.dynamodb.conditions import Attr
+from AWSIoTPythonSDK.MQTTLib import AWSIoTMQTTClient
+import tensorflow.keras as keras
+from PIL import Image, ImageOps
